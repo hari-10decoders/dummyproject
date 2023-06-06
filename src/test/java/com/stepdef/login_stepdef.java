@@ -44,7 +44,7 @@ public class login_stepdef {
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		WebElement value = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']"));
 		System.out.println(value.getText());
-		System.out.println("sucessfully passed the testcases");
+		System.out.println("sucessfully passed the testcases1");
 	}
 	
 }
