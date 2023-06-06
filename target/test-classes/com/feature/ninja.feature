@@ -1,4 +1,4 @@
-		@tags1
+		@registration
 		Feature: To User Acount fucntionality
 		
  		Background: User open the registration page

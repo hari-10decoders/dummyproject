@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features ="src\\test\\java\\com\\feature",
-glue={"com\\stepdef"}, tags = ("@reg4 or @reg3 or @Reg1")
+glue={"com\\stepdef"}, tags = ("@registration or @login")
 		)
 
 
@@ -24,6 +24,7 @@ public class ninja_runner {
 	public static void setup() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\10Decoders\\eclipse-workspace\\Dummy_project\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		
 }
 	@AfterClass
