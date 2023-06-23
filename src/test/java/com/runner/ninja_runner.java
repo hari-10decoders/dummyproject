@@ -11,7 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features ="src\\test\\java\\com\\feature",
-glue={"com\\stepdef"}, tags = ("@registration or @login")
+glue={"com\\stepdef"},plugin = {"html:target/CucumbeReport.html",
+		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"} , tags = ("@registration")
 		)
 
 
