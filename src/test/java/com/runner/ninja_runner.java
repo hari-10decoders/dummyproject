@@ -10,22 +10,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features ="src\\test\\java\\com\\feature",glue={"com\\stepdef"} )
+@CucumberOptions(features ="src\\test\\java\\com\\feature",
+glue={"com\\stepdef"}, tags = ("@registration or @login")
+		)
+
 
 public class ninja_runner {
 	
 	
 	public static WebDriver driver;
+	
 	@BeforeClass
 	public static void setup() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\10Decoders\\eclipse-workspace\\Dummy_project\\driver\\chromedriver.exe");
-
-		 driver = new ChromeDriver();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		
 }
 	@AfterClass
 	public static void teardown() {
-//		driver.close();
+		driver.close();
+		
 		
 	}
 }
